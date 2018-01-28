@@ -23,10 +23,13 @@ The transaction controller provides four service calls
 The tests are written in the BDD style. By this way there is a good contract between the requirements and the code directly.
 This is achieved by writing cucumber stories and translating them to step definitions.
 
-There are 5 tests written in the Transactions.feature
-Each given, when and then in the Gherkin code are directly mapped to one of the Step definitions in the Step Definitions file
+There are 5 tests written in the Transactions.feature file.
+
+Give, When and Then( Gherkin code) are directly mapped to one of the Step definitions in the Step Definitions file.
 RestAssured framework is used to make the assertions. It has inbuilt methods to test the response that is returned.
+The tests are run as Junit tests in the RunTest class and the path to the feature is given inside it
 
 Only BDD tests(which are acceptance tests) are written. 
-The unit test to test the specific units are not covered as part of this challenge
+The unit test to test the specific units such as the TransactionController, TransactionService are not covered
+as part of this challenge
 
