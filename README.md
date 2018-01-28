@@ -28,5 +28,5 @@ Each given, when and then in the Gherkin code are directly mapped to one of the 
 RestAssured framework is used to make the assertions. It has inbuilt methods to test the response that is returned.
 
 Only BDD tests(which are acceptance tests) are written. 
-The unit test to test the specific units are not w
+The unit test to test the specific units are not covered as part of this challenge
 
