@@ -17,7 +17,7 @@ import springboot.service.TransactionService;
 
 @RestController
 @RequestMapping("/api")
-public class RestApiController {
+public class TransactionController {
 
 	@Autowired
 	TransactionService transactionService;

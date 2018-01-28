@@ -27,7 +27,7 @@ public class StepDefinitions {
 
 	@Given("^There is transactions api$")
 	public void There_is_transactions_api() {
-		baseURI = "http://localhost:8080/SpringBootRestApi/api";
+		baseURI = "http://localhost:8080/api";
 	}
 
 	@Given("^there is a standalone (\\d+)$")
