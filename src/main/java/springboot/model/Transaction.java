@@ -27,10 +27,6 @@ public class Transaction {
 		return amount;
 	}
 
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
-
 	public String getType() {
 		return type;
 	}
