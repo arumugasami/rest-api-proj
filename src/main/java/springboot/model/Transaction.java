@@ -31,10 +31,6 @@ public class Transaction {
 		return type;
 	}
 
-	public void setType(String type) {
-		this.type = type;
-	}
-
 	public long getTransaction_id() {
 		return transaction_id;
 	}

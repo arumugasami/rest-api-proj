@@ -19,35 +19,35 @@ import springboot.service.TransactionService;
 @RequestMapping("/api")
 public class TransactionController {
 
-	@Autowired
-	TransactionService transactionService;
+    @Autowired
+    TransactionService transactionService;
 
-	@RequestMapping(value = "/transaction/{transact}", method = RequestMethod.PUT)
-	public ResponseEntity<?> updateTransaction(@PathVariable("transact") long id, @RequestBody TransactionDto transactionDto) {
-		// transactionService.updateTransaction(transactionDto);
-		Transaction transaction = transactionService.updateTransaction(id, transactionDto);
-		return new ResponseEntity<Transaction>(transaction, HttpStatus.OK);
-	}
+    @RequestMapping(value = "/transaction/{transact}", method = RequestMethod.PUT)
+    public ResponseEntity<?> updateTransaction(@PathVariable("transact") long id, @RequestBody TransactionDto transactionDto) {
+        // transactionService.updateTransaction(transactionDto);
+        Transaction transaction = transactionService.updateTransaction(id, transactionDto);
+        return new ResponseEntity<Transaction>(transaction, HttpStatus.OK);
+    }
 
-	@RequestMapping(value = "/transaction/{transact}", method = RequestMethod.GET)
-	public ResponseEntity<?> getTransaction(@PathVariable("transact") long id) {
-		Transaction transaction = transactionService.getTransactionById(id);
-		return new ResponseEntity<Transaction>(transaction, HttpStatus.OK);
+    @RequestMapping(value = "/transaction/{transact}", method = RequestMethod.GET)
+    public ResponseEntity<?> getTransaction(@PathVariable("transact") long id) {
+        Transaction transaction = transactionService.getTransactionById(id);
+        return new ResponseEntity<Transaction>(transaction, HttpStatus.OK);
 
-	}
+    }
 
-	@RequestMapping(value = "/types/{type}", method = RequestMethod.GET)
-	public ResponseEntity<List<Long>> getTypes(@PathVariable("type") String type) {
-		List<Long> transaction = transactionService.getTransactionByType(type);
-		return new ResponseEntity<List<Long>>(transaction, HttpStatus.OK);
+    @RequestMapping(value = "/types/{type}", method = RequestMethod.GET)
+    public ResponseEntity<List<Long>> getTypes(@PathVariable("type") String type) {
+        List<Long> transaction = transactionService.getTransactionByType(type);
+        return new ResponseEntity<List<Long>>(transaction, HttpStatus.OK);
 
-	}
+    }
 
-	@RequestMapping(value = "/sum/{transact}", method = RequestMethod.GET)
-	public ResponseEntity<?> getSum(@PathVariable("transact") long id) {
-		Double transaction = transactionService.getSum(id);
-		return new ResponseEntity<Double>(transaction, HttpStatus.OK);
+    @RequestMapping(value = "/sum/{transact}", method = RequestMethod.GET)
+    public ResponseEntity<?> getSum(@PathVariable("transact") long id) {
+        Double transaction = transactionService.getSum(id);
+        return new ResponseEntity<Double>(transaction, HttpStatus.OK);
 
-	}
+    }
 
 }
